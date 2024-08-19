@@ -1,6 +1,6 @@
 @import url('style.css');
 
-.mask {
+/* .mask {
     width: 0;
     height: 0;
     position: absolute;
@@ -21,7 +21,7 @@
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
+} */
 
     
 .circle {
@@ -45,6 +45,28 @@
     right: -50px;
 }
 
+.icon-padlock, .icon-register{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-position: center center;
+    background-size: 100% 100%;
+
+}
+
+.icon-padlock {
+    background: url('../img/511942_lock_login_protection_secure_icon\ 1.png') no-repeat;
+    top: 0;
+    right: 0;
+}
+
+.icon-register {
+    background: url('../img/9133514_signup_register_login_icon\ 1.png') no-repeat;
+    
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+}
 
 
 @media (min-width: 760px){
