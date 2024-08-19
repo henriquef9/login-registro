@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <!-- <svg class="mask">
+        <clipPath id="svgMask" clipPathUnits="objectBoundingBox">
+            <path d="M0,0 H1 C1,0,1,0.21,0.877,0.227 C0.781,0.238,0.736,0.322,0.718,0.372 C0.709,0.397,0.702,0.423,0.692,0.445 C0.67,0.492,0.625,0.572,0.562,0.61 C0.471,0.666,0.497,0.499,0.383,0.75 C0.368,0.784,0.353,0.812,0.339,0.834 C0.271,0.943,0.134,0.933,0.037,0.982 L0,1 V0" fill="#4B62E3"/>
+        </clipPath>
+    </svg>
+
+    <div class="background-effect">
+
+    </div> -->
+
+    <div class="container">
+
+        <section id="login" class="login">
+
+            <div class="login-left">
+
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+
+                <h2>Faça seu login</h2>
+
+                <form id="login-form" action="" method="post">
+
+                    <div class="input-field">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="emial" id="email">
+                    </div>
+
+                    <div class="input-field">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password">
+
+                    </div>
+
+                    <div class="input-switch">
+                        <input type="checkbox" name="remember" id="remember" >
+                        <label class="switch" for="remember"></label>
+                        <label for="remember">Lembrar-me</label>
+                    </div>
+
+                    <div>
+                        <a href="">Esqueceu a senha?</a>
+                    </div>
+
+                    <div class="input-submit">
+                        <button type="submit">Entrar</button>
+                    </div>
+
+                </form>
+
+                <div class="mobile">
+
+                    <p class="social-media-title">Ou acesse pelas suas redes socias</p>
+
+                    <div class="social-media">
+
+                        <div class="icon-social-media">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="icon-social-media">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="icon-social-media">
+                            <i class="fa fa-google" aria-hidden="true"></i>
+                        </div>
+
+                    </div>
+
+                    <p>Ainda não possui cadastro? <a href="" class="btn-register">Faça agora</a></p>
+
+                </div>
+
+            </div>
+
+            <div class="login-right">
+
+                <div class="icon-padlock"></div>
+
+                <h1 class="name-logo">TaskFlow</h1>
+
+                <h3>Bem-vindo de volta!</h3>
+
+                <p>Estamos felizes em ver você novamente! Por favor, faça login para continuar e acessar sua conta. Se você é novo por aqui, sinta-se à vontade para se registrar e começar sua jornada conosco. Nossa plataforma é feita pensando em você, proporcionando uma<span class="text-primary"> experiência simples</span> e <span class="text-primary">segura</span>.</p>
+
+                <a href="" class="btn-register">Registre-se</a>
+
+                <div class="other-login">
+
+                    <p>Ou acesse pelas suas redes sociais</p>
+
+                    <div class="social-media">
+                        
+                        <div class="icon-social-media">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="icon-social-media">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </div>
+
+                        <div class="icon-social-media">
+                            <i class="fa fa-google" aria-hidden="true"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="register" class="">
+
+            <div class="register-left ">
+                <h1 class="name-logo">TaskFlow</h1>
+
+                <div class="content">
+
+                    <h3>Já tem uma conta?</h2>
+
+                    <p>Se você já possui uma conta, faça login para acessar seus recursos e continuar de onde parou.</p>
+
+                    <a class="btn-login" href="">Login</a>
+                </div>
+
+                <div class="icon-register">
+
+                </div>
+            </div>
+
+            <div class="register-right">
+
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+
+                <h2>Crie sua conta</h2>
+
+                <form id="register-form" action="" method="post">
+
+                    <div class="input-field">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name-register">
+                    </div>
+
+                    <div class="input-field">
+                        <label for="email-register">E-mail</label>
+                        <input type="email" name="email" id="email-register">
+                    </div>
+
+                    <div class="input-field">
+                        <label for="password-register">Senha</label>
+                        <input type="password" name="password" id="password-register" oninput="password_confir()" onchange="password_confir()">
+                    </div>
+
+                    <div class="input-field">
+                        <label for="password-confir">Confirma senha</label>
+                        <input type="password" name="password-confir" id="password-confir" oninput="password_confir()" onchange="password_confir()">
+
+                    </div>
+
+                    <div class="input-submit">
+                        <button type="submit">Cadastrar</button>
+                    </div>
+
+                </form>
+
+                
+                <div class="mobile">
+
+                    <h3>Já tem uma conta?</h2>
+
+                    <p>Se você já possui uma conta, faça login para acessar seus recursos e continuar de onde parou.</p>
+
+                    <a class="btn-login" href="">Faça seu login aqui!</a>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+    
+
+    <div class="modal">
+        <div class="modal-top">
+            <div class="modal-time-container">
+                <div class="modal-time"></div> 
+            </div>
+            <div class="modal-exit">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="modal-body">
+            mensagem de error
+        </div>
+    </div>
+    
+
+
+    <!-- <script src="animation.js"></script> -->
+     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/56e487acd9.js" crossorigin="anonymous"></script>
+</body>
+</html>

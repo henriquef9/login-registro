@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal com Barra de Tempo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<style>
+    /* Estilos básicos do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos da barra de progresso */
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 25px;
+}
+
+</style>
+<body>
+
+<!-- Botão para abrir o modal -->
+<button id="openModalBtn">Abrir Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Carregando...</h2>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Pega os elementos do DOM
+const modal = document.getElementById("myModal");
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.querySelector(".close");
+const progressBar = document.getElementById("progressBar");
+
+let width = 0;
+let intervalId;
+
+// Abre o modal e inicia a barra de progresso
+openModalBtn.onclick = function() {
+    modal.style.display = "block";
+    width = 0;
+    progressBar.style.width = width + '%';
+    intervalId = setInterval(frame, 120); // Atualiza a cada 100ms
+}
+
+// Fecha o modal
+closeModalBtn.onclick = function() {
+    modal.style.display = "none";
+    clearInterval(intervalId);
+}
+
+// Fecha o modal clicando fora dele
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+        clearInterval(intervalId);
+    }
+}
+
+// Função para incrementar a barra de progresso
+function frame() {
+    if (width >= 100) {
+        clearInterval(intervalId);
+        modal.style.display = "none"; // Fecha o modal quando a barra estiver completa
+    } else {
+        width++;
+        progressBar.style.width = width + '%';
+    }
+}
+
+</script>
+</body>
+</html>

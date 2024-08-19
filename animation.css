@@ -1,0 +1,76 @@
+@import url('style.css');
+
+.mask {
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.background-effect {
+    position: absolute;
+    background: linear-gradient(270deg, var(--color-secundaria), var(--color-primaria));
+    width: 100vw;
+    height: 100vh;
+    background-size: 400% 400%;
+    clip-path: url(#svgMask);
+    z-index: -1;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+    
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-1 {
+    background-color: var(--color-secondary);
+    width: 60px;
+    height: 60px;
+    top: 50px;
+    left: -30px;
+}
+
+.circle-2 {
+    background-color: var(--color-secondary);
+    width: 90px;
+    height: 90px;
+    bottom: 50px;
+    right: -50px;
+}
+
+
+
+@media (min-width: 760px){
+    
+    .register-right .circle-1 {
+        left: -30px;
+    }
+    
+    .register-right .circle-2 {
+        left: -50px;
+    }
+
+    .circle-1 {
+        background-color: var(--color-primary);    
+        left: calc(100% - 30px);
+    }
+}
+
+
+@media (min-width: 992px) {
+    
+    .circle-2 {
+        background-color: var(--color-secondary);
+        width: 90px;
+        height: 90px;
+        bottom: 50px;
+        right: -30px;
+    }
+}
